@@ -104,7 +104,8 @@ router.put('/role/:id', (req,res) =>{
         return;
     }
 
-    const sql = `UPDATE role SET department_id = ?
+    const sql = `UPDATE role 
+                SET department_id = ?
                 WHERE id = ?`;
     const params = [req.body.department_id, req.params.id];
     db.query(sql, params, (err, result) =>{   
