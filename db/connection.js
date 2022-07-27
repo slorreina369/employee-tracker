@@ -4,9 +4,9 @@ const db = mysql.createConnection(
     {
         host:'localhost',
         // Your MySQL username
-        user:'testuser',
+        user:'lorreina',
         // Your MySQL password
-        password:'testpassword',
+        password:'',
         database:'tracker'
     },
     console.log('Connected to election database.')

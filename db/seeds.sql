@@ -15,6 +15,7 @@ VALUES
 ('Accountant', 3, 125000),
 ('Legal Team Lead', 4, 250000),
 ('Lawyer', 4, 190000);
+
 INSERT INTO employee(first_name, last_name, role_id)
 VALUES
 ('John', 'Doe', 1),
