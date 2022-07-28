@@ -36,7 +36,13 @@ const promptUser =()=>{
                 return departmentPrompt();
                 break;
             case 'Quit':
+                return 'Quit'   
                 break;
+        }
+    })
+    .then(response =>{
+        if(response != 'Quit'){
+            return promptUser();
         }
     });
 };
