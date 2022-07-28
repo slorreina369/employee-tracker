@@ -26,7 +26,7 @@ Run cli with `npm run cli`
 
 # Images
 
-![Screen Recording](./assets/visuals/employee_tracker.webm)
+![Screen Recording](./assets/visuals/employee_tracker.mp4)
 
 ## Contributing 
 
