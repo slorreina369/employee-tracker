@@ -4,15 +4,15 @@ const db = require('../../db/connection');
 const inputCheck = require('../../utils/inputCheck');
 
 router.get('/employees', (req, res) =>{
-    const sql = `SELECT employees.id, employees.first_name, employees.last_name, role.title,departments.name AS department,
+    const sql = `SELECT employees.id, employees.first_name, employees.last_name, roles.title,departments.name AS department,
                     CONCAT(manager.first_name,' ', manager.last_name) AS manager 
                 FROM employees 
-                LEFT JOIN role 
-                ON employees.role_id = role.id 
+                LEFT JOIN roles 
+                ON employees.role_id = roles.id 
                 LEFT JOIN employees AS manager 
                 ON employees.manager_id = manager.id
                 LEFT JOIN departments
-                ON role.department_id = departments.id;`;
+                ON roles.department_id = departments.id;`;
     
     db.query(sql, (err,rows) =>{
         if(err){
@@ -27,15 +27,15 @@ router.get('/employees', (req, res) =>{
 });
 
 router.get('/employees/:id', (req,res) =>{
-    const sql = `SELECT employees.id, employees.first_name, employees.last_name, role.title,departments.name AS department,
+    const sql = `SELECT employees.id, employees.first_name, employees.last_name, roles.title,departments.name AS department,
                     CONCAT(manager.first_name,' ', manager.last_name) AS manager 
                 FROM employees 
-                LEFT JOIN role 
-                ON employees.role_id = role.id 
+                LEFT JOIN roles 
+                ON employees.role_id = roles.id 
                 LEFT JOIN employees AS manager 
                 ON employees.manager_id = manager.id
                 LEFT JOIN departments
-                ON role.department_id = departments.id
+                ON roles.department_id = departments.id
                 WHERE employees.id = ?`;
     const params = [req.params.id];
 

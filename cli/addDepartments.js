@@ -26,7 +26,6 @@ const departmentPrompt = () => {
         .then((response)=>{
             return response.json();
         })
-        .then(console.log);
     })
 };
 

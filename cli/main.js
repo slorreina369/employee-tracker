@@ -3,6 +3,8 @@ const viewDepartments = require('../cli/viewAllDepartments');
 const viewEmployees = require('./viewAllEmployees');
 const viewRoles = require('./viewAllRoles');
 const departmentPrompt = require('./addDepartments');
+const rolesPrompt = require('./addRoles');
+const employeePrompt = require('./addEmployeeRole');
 
 const promptUser =()=>{
     return inquirer.prompt([
@@ -19,11 +21,13 @@ const promptUser =()=>{
                 return viewEmployees();
                 break;
             case 'Add Employee Role':
+                return employeePrompt();
                 break;
             case 'View All Roles':
                 return viewRoles();
                 break;
-            case 'Add Roles':
+            case 'Add Role':
+                return rolesPrompt();
                 break;
             case 'View All Departments':
                 return viewDepartments();
