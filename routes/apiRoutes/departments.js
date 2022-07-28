@@ -57,7 +57,6 @@ router.delete('/departments/:id', (req,res) =>{
 router.post('/departments', ({body}, res)=>{
     const errors = inputCheck(
         body,
-        'id',
         'name'
     );
 
@@ -66,9 +65,8 @@ router.post('/departments', ({body}, res)=>{
         return;
     }
 
-    const sql = `INSERT INTO departments(id, name) VALUES (?,?)`;
+    const sql = `INSERT INTO departments(name) VALUES (?)`;
     const params =[
-        body.id,
         body.name
     ];
 

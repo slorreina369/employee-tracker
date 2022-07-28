@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const viewDepartments = require('../cli/viewAllDepartments');
 const viewEmployees = require('./viewAllEmployees');
 const viewRoles = require('./viewAllRoles');
+const departmentPrompt = require('./addDepartments');
 
 const promptUser =()=>{
     return inquirer.prompt([
@@ -28,6 +29,7 @@ const promptUser =()=>{
                 return viewDepartments();
                 break;
             case 'Add Department':
+                return departmentPrompt();
                 break;
             case 'Quit':
                 break;
