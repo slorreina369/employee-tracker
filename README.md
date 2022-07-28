@@ -18,11 +18,15 @@ Run `npm install`
 
 ## Usage
 
+Run mysql2
+
 Run server with `npm start`
 
 Run cli with `npm run cli`
 
 # Images
+
+![Screen Recording](./assets/visuals/employee_tracker.webm)
 
 ## Contributing 
 
