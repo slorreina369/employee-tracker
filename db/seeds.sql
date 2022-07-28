@@ -5,7 +5,7 @@ VALUES
 (4, 'Legal'),
 (1, 'Sales');
 
-INSERT INTO role(title, department_id, salary)
+INSERT INTO roles(title, department_id, salary)
 VALUES
 ('Sales Lead', 1, 100000),
 ('Salesperson', 1, 80000),

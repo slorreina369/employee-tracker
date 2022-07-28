@@ -2,7 +2,7 @@ const AsciiTable = require("ascii-table/ascii-table");
 const fetch = require('node-fetch');
 
 const viewRoles = ()=>{
-    return fetch('http://localhost:3001/api/role')
+    return fetch('http://localhost:3001/api/roles')
     .then((response) => response.json())
     .then(response =>{
         const table = AsciiTable.factory({
